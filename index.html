@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Flexbox!</title>
+</head>
+<body>
+<header id="websiteInfo"></header>
+<form name="quiz-form" id="quiz-form">
+	<div id="quizContainer">
+		<p id="quizQuestion"></p>
+		<div id="imageContainer"></div>
+		<p id="quizAnswer"></p>
+	</div>
+	<input type="submit" placeholder="Submit" id="submitButton">
+</form>
+<div id="resultsContainer">
+	<p id="results"></p>
+	<div class="refreshPage">
+		<button id="refreshButton">Take Quiz Again</button>
+	</div>
+	<div><p>or</p></div>
+	<div class="studyGuide">
+		<!-- <p>Refresh your memory on all of the Flexbox selectors before you take the quiz again!</p> add this and remove below p tag when i dynamically add my own study guide-->
+		<p>Head over to CSS-Tricks article on Flexbox to refresh your memory before taking the quiz again!</p>
+		<a href="http://bit.ly/2vwtnhM" target="_blank"><button id="studyGuideButton">Flexbox Study Guide</button></a>
+	</div>
+
+	</div>
+</div>
+<div id="flexboxStudy"></div>
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>	
+<script src="./public/scripts/app.js"></script>
+
+<!--about this project
+a simple online quiz to help users test their knowledge on Flexbox-->
+</body>
+</html>

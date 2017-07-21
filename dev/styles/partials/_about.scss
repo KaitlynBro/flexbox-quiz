@@ -1,0 +1,18 @@
+#about {
+	display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #c3e7fa;
+	h2 {
+		letter-spacing: 1px;
+		font-weight: 400;
+		background-color: #c3e7fa;
+		padding: 20px 20px 0px 20px;
+		text-align: center;
+	}
+	h3 {
+		padding: 0px 20px 20px 20px;
+		font-weight: 400;
+		text-align: center;
+	}
+}

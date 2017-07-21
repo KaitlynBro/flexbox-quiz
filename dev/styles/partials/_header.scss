@@ -1,0 +1,63 @@
+header {
+	margin-bottom: 100px;
+}
+
+//all divs in header - general styles
+.flexVisual {
+	width: 100px;
+	height: 100px;
+	background-color: #c3e7fa;
+	margin: 20px;
+}
+
+.row {
+	display: flex;
+	justify-content: center;
+}
+
+//row 1 of divs in header
+
+.flexGrow {
+	flex-grow: 1;
+}
+
+//end of row 1 of divs
+
+//row 2 of divs in header
+
+.rowSpaceAround {
+	justify-content: space-around;
+}
+
+.flexRow2 {
+	width: 100px;
+	height: 100px;
+}
+
+//row 2 ends
+
+//row 3 of divs in header
+
+.flexVisual {
+	text-align: center;
+	vertical-align: middle;
+	line-height: 90px; 
+	font-size: 25px;
+	font-weight: 800;
+	color: #008dd5;
+	justify-content: space-around;
+}
+
+.order {
+	order: 2;
+}
+
+//row 3 ends
+
+//row 4 of header divs
+
+.rowSpaceBetween {
+	justify-content: space-between;
+}
+
+//row 4 ends

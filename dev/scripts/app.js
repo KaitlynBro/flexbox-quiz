@@ -16,7 +16,7 @@ document.getElementById('websiteInfo').append('A fun quiz to test your knowledge
 
 const myQuiz = [
 	{
-		question: 'How do you access Flexbox properties?',
+		question: 'Question 1: How do you access Flexbox properties?',
 		answers: {
 			a: 'display: flex',
 			b: 'display: flexbox',
@@ -25,7 +25,7 @@ const myQuiz = [
 		correctAnswer: 'answer a'
 	},
 	{
-		question: 'What element do you target Flexbox on to?',
+		question: 'Question 2: What element do you target Flexbox on to?',
 		answers: {
 			a: 'The parent element',
 			b: 'Children elements',
@@ -34,7 +34,7 @@ const myQuiz = [
 		correctAnswer: 'answer a'
 	},
 	{
-		question: 'How do you specify how flex items are laid out in the container?',
+		question: 'Question 3: How do you specify how flex items are laid out in the container?',
 		answers: {
 			a: 'justify content',
 			b: 'flex-direction',
@@ -43,7 +43,7 @@ const myQuiz = [
 		correctAnswer: 'answer b'
 	},
 	{
-		question: 'What flex property causes flex items to be laid out on multiple lines rather than just one?',
+		question: 'Question 4: What flex property causes flex items to be laid out on multiple lines rather than just one?',
 		answers: {
 			a: 'flex-wrap',
 			b: 'flex-flow',
@@ -52,16 +52,16 @@ const myQuiz = [
 		correctAnswer: 'answer a'
 	},
 	{
-		question: 'How can you center your flex items along the main axis?',
+		question: 'Question 5: How can you center your flex items along the main axis?',
 		answers: {
 			a: 'align-self',
 			b: 'align-items',
-			c: 'justofy-content'
+			c: 'justify-content'
 		},
 		correctAnswer: 'answer c'
 	},
 	{
-		question: 'How can you cause a flex item to grow in size?',
+		question: 'Question 6: How can you cause a flex item to grow in size?',
 		answers: {
 			a: 'flex-grow',
 			b: 'There is no way to do this with Flexbox',
@@ -70,13 +70,40 @@ const myQuiz = [
 		correctAnswer: 'answer a'
 	},
 	{
-		question: 'What Flexbox property changes the order of the flex items?',
+		question: 'Question 7: What Flexbox property changes the order of the flex items?',
 		answers: {
 			a: 'flex-order',
 			b: 'order',
 			c: 'flex-change'
 		},
 		correctAnswer: 'answer b'
+	},
+	{
+		question: 'Question 8: What Flexbox property do you use to move a flex item to the end of its container?',
+		answers: {
+			a: 'flex-grow: 1',
+			b: 'justify-content: flex-end',
+			c: 'flex-direction: row-reverse'
+		},
+		correctAnswer: 'answer b'
+	},
+	{
+		question: 'Question 9: How do you center flex items and give them space between each item at the same time?',
+		answers: {
+			a: 'justify-content: space-around',
+			b: 'align-items: center;',
+			c: 'justify-content: space-between'
+		},
+		correctAnswer: 'answer c'
+	},
+	{
+		question: 'Question 10: What property forces flex items to be displayed at the baseline of their container?',
+		answers: {
+			a: 'align-items: flex-start',
+			b: 'justify-content: flex-end',
+			c: 'align-items: flex-end'
+		},
+		correctAnswer: 'answer c'
 	}
 ]
 
@@ -95,32 +122,16 @@ $.each(myQuiz, function(key, questionObject) {
 			//this prevents multiple inputs for a question from being selected
 		answersContainer.append(`<input type='radio' name="${questionObject.question}" value="${answer}" class="answer">${key}: ${answer}</input>`)
 	});
+
 	//put the answers into the question container
 	questionContainer.append(answersContainer);
-
-
-	//add different image for each question
-	if (questionObject.question === 'question 1') {
-		var img = document.createElement('img');
-		img.src = "assets/test.svg";
-		var src = document.getElementById('imageContainer');
-		src.appendChild(img);
-	}
-
-	//add different image for each question
-	if (questionObject.question === 'question 2') {
-		var img = document.createElement('img');
-		img.src = "assets/test.svg";
-		var src = document.getElementById('imageContainer');
-		src.appendChild(img);
-	}
 
 	//append it all onto the quiz container
 	$('#quizContainer').append(questionContainer);
 });
 
-// You don't want to create an event listener on submit for each question, so I took it out of the loop.
-// What you want to do is check each input's value against the correct value
+
+//check each input's value against the correct value
 $('#quiz-form').on('submit', function(e) {
 	e.preventDefault();
 	
@@ -145,15 +156,14 @@ $('#quiz-form').on('submit', function(e) {
 
 
 		// Compare them if they are correct
-		if (answer === correctAnswer) {
-			console.log(`correct ${question}` )
-			resultsContainer.append(`correct ${question}` )
-
 			// Do something with right answer
+		if (answer === correctAnswer) {
+			$('.myResults').append(`<li>Correct ${question}</li>` )
+			$('.myResults').css('border', '30px solid #008dd5');			
 		} else {
-			resultsContainer.append(`incorrect ${question}` )
-			console.log(`incorrect ${question}` )
 			// Do something with wrong answer
+			$('.myResults').css('border', '30px solid #008dd5');
+			$('.myResults').append(`<li>Incorrect ${question}</li>` )
 		}		
 	});
 });

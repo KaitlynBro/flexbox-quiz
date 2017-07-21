@@ -1,0 +1,30 @@
+@import 'partials/setup';
+@import 'partials/header';
+@import 'partials/about';
+@import 'partials/quiz';
+
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 16px;
+	max-width: 0 auto;
+}
+
+.wrapper {
+	max-width: 900px;
+	margin: 0 auto;
+}
+
+h1 {
+	text-align: center;
+    position: relative;
+    justify-content: center;
+    display: flex;
+    font-weight: 800;
+    font-size: 71px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #008dd5;
+    margin: 0;
+}
+

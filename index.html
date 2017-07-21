@@ -3,29 +3,78 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Flexbox!</title>
+	<link rel="stylesheet" type="text/css" href="./public/styles/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,800" rel="stylesheet">
 </head>
 <body>
-<header id="websiteInfo"></header>
-<form name="quiz-form" id="quiz-form">
+<header>
+
+	<div class="row">
+		<div class="flexVisual flexRow1 flexGrow"></div>
+		<div class="flexVisual flexRow1"></div>
+		<div class="flexVisual flexRow1"></div>
+	</div>
+
+	<div class="row rowSpaceAround">
+		<div class="flexVisual flexRow2"></div>
+		<div class="flexVisual flexRow2"></div>
+		<div class="flexVisual flexRow2"></div>
+		<div class="flexVisual flexRow2"></div>
+		<div class="flexVisual flexRow2"></div>
+		<div class="flexVisual flexRow2"></div>
+	</div>
+
+	<div class="headerInfo">
+		<h1>Flexbox!</h1>
+	</div>
+
+	<div class="row">
+		<div class="flexVisual orderVisual order">1</div>
+		<div class="flexVisual orderVisual">2</div>
+		<div class="flexVisual orderVisual">3</div>
+		<div class="flexVisual orderVisual">4</div>
+		<div class="flexVisual orderVisual">5</div>
+		<div class="flexVisual orderVisual">6</div>
+	</div>
+
+	<div class="row rowSpaceBetween">
+		<div class="flexVisual flexRow4"></div>
+		<div class="flexVisual flexRow4"></div>
+		<div class="flexVisual flexRow4"></div>
+		<div class="flexVisual flexRow4"></div>
+		<div class="flexVisual flexRow4"></div>
+		<div class="flexVisual flexRow4"></div>
+	</div>
+
+</header>
+<section id="about">
+	<h2 id="websiteInfo"></h2>
+	<h3>Take the quiz below, then press submit to see your results! Or, check out CSS-Tricks article below on all things Flexbox before taking the quiz.</h3>
+</section>
+<form name="quiz-form" id="quiz-form" class="quizForm">
 	<div id="quizContainer">
 		<p id="quizQuestion"></p>
-		<div id="imageContainer"></div>
 		<p id="quizAnswer"></p>
 	</div>
 	<input type="submit" placeholder="Submit" id="submitButton">
 </form>
+
 <div id="resultsContainer">
-	<p id="results"></p>
+	<p id="results">
+		<ul class="myResults"></ul>
+	</p>
 	<div class="refreshPage">
 		<button id="refreshButton">Take Quiz Again</button>
 	</div>
-	<div><p>or</p></div>
+
+	<div>
+		<p>or</p>
+	</div>
+
 	<div class="studyGuide">
 		<!-- <p>Refresh your memory on all of the Flexbox selectors before you take the quiz again!</p> add this and remove below p tag when i dynamically add my own study guide-->
 		<p>Head over to CSS-Tricks article on Flexbox to refresh your memory before taking the quiz again!</p>
 		<a href="http://bit.ly/2vwtnhM" target="_blank"><button id="studyGuideButton">Flexbox Study Guide</button></a>
-	</div>
-
 	</div>
 </div>
 <div id="flexboxStudy"></div>

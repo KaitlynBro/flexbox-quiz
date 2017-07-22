@@ -1,6 +1,39 @@
+footer {
+	background-color: #c3e7fa;
+    padding: 40px;
+    margin-top: 150px;
+    display: flex;
+    div {
+    	width: 50%;
+    }
+    p {
+    	padding: 20px;
+    	flex-wrap: wrap;
+    	text-align: center;
+    }
+}
+
+.thankyou {
+	margin-top: 20px;
+}
+
+.contact {
+	flex-direction: column;
+	margin-top: 20px;
+	.contactMe {
+		margin-bottom: 0;
+		padding-bottom: 0;
+	}
+}
+
 .socialIcons {
 	display: flex;
     justify-content: center;
+    text-align: center;
+    position: relative;
+    top: 40%;
+    right: -27%;
+    transform: translateY(-50%);
     .footerIcon {
     	margin-right: 20px;
     	margin-bottom: 90px;

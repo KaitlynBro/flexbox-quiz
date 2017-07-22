@@ -158,6 +158,7 @@ $('#quiz-form').on('submit', function(e) {
 		// Compare them if they are correct
 			// Do something with right answer
 		if (answer === correctAnswer) {
+			
 			$('.myResults').append(`<li>Correct ${question}</li>` )
 			$('.myResults').css('border', '30px solid #008dd5');		
 		} else {

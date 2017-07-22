@@ -214,6 +214,7 @@ input[type="submit"] {
   letter-spacing: 1px;
   align-self: center;
   margin-top: 70px;
+  margin-bottom: 50px;
   font-size: 20px;
   text-transform: uppercase; }
 
@@ -238,6 +239,63 @@ input[type="submit"] {
   padding: 30px;
   width: 80%;
   justify-content: flex-end; }
+
+.information {
+  width: 80%;
+  border: 30px solid #008dd5;
+  padding: 40px;
+  margin: 0 auto; }
+
+.moreInfo {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  line-height: 3; }
+  .moreInfo p {
+    margin: 0; }
+
+.or {
+  font-size: 30px;
+  text-transform: uppercase;
+  font-weight: 800;
+  color: #008dd5; }
+
+button {
+  border-radius: 4px;
+  background-color: #c3e7fa;
+  border: none;
+  padding: 15px;
+  width: 60%;
+  display: inline-block;
+  margin-top: 20px;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  font-size: 20px;
+  text-transform: uppercase; }
+
+.socialIcons {
+  display: flex;
+  justify-content: center; }
+  .socialIcons .footerIcon {
+    margin-right: 20px;
+    margin-bottom: 90px;
+    font-size: 20px;
+    color: #008dd5; }
+
+.fa {
+  transition: color 0.9s ease; }
+
+.fa-twitter:hover {
+  color: #1da1f2; }
+
+.fa-linkedin:hover {
+  color: #007bb6; }
+
+.fa-medium:hover {
+  color: #14c767; }
+
+.fa-github:hover {
+  color: #222222; }
 
 body {
   font-family: 'Open Sans', sans-serif;

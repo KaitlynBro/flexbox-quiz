@@ -159,11 +159,12 @@ $('#quiz-form').on('submit', function(e) {
 			// Do something with right answer
 		if (answer === correctAnswer) {
 			$('.myResults').append(`<li>Correct ${question}</li>` )
-			$('.myResults').css('border', '30px solid #008dd5');			
+			$('.myResults').css('border', '30px solid #008dd5');		
 		} else {
 			// Do something with wrong answer
 			$('.myResults').css('border', '30px solid #008dd5');
-			$('.myResults').append(`<li>Incorrect ${question}</li>` )
+			$('.myResults').append(`<li>Incorrect ${question}</li>` );
+			$('.myResults').append(`the correct answer is ${questionObject[0].correctAnswer}`);
 		}		
 	});
 });
@@ -171,7 +172,7 @@ $('#quiz-form').on('submit', function(e) {
 
 //give user option to refresh page to re-take quiz
 $('#refreshButton').on('click', function(){
-	location.reload();
+	location.href = location.href;
 });
 
 

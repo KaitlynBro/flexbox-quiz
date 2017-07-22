@@ -1,0 +1,31 @@
+.socialIcons {
+	display: flex;
+    justify-content: center;
+    .footerIcon {
+    	margin-right: 20px;
+    	margin-bottom: 90px;
+    	font-size: 20px;
+    	color: #008dd5;
+    }
+}
+
+.fa {
+	transition: color 0.9s ease;
+}
+
+.fa-twitter:hover {
+	color: #1da1f2;
+}
+
+.fa-linkedin:hover {
+	color: #007bb6;
+}
+
+.fa-medium:hover {
+	color: #14c767;
+}
+
+.fa-github:hover {
+	color: #222222;
+}
+

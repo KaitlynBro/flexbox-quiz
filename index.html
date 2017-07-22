@@ -5,6 +5,7 @@
 	<title>Flexbox!</title>
 	<link rel="stylesheet" type="text/css" href="./public/styles/style.css">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,800" rel="stylesheet">
+	<script src="https://use.fontawesome.com/b13619d841.js"></script>
 </head>
 <body>
 <header>
@@ -47,10 +48,15 @@
 	</div>
 
 </header>
+
+<!--about my website section-->
 <section id="about">
 	<h2 id="websiteInfo"></h2>
 	<h3>Take the quiz below, then press submit to see your results! Or, check out CSS-Tricks article below on all things Flexbox before taking the quiz.</h3>
 </section>
+<!--end of about section-->
+
+<!--form section-->
 <form name="quiz-form" id="quiz-form" class="quizForm">
 	<div id="quizContainer">
 		<p id="quizQuestion"></p>
@@ -58,26 +64,54 @@
 	</div>
 	<input type="submit" placeholder="Submit" id="submitButton">
 </form>
+<!--form ends-->
 
-<div id="resultsContainer">
-	<p id="results">
-		<ul class="myResults"></ul>
-	</p>
-	<div class="refreshPage">
-		<button id="refreshButton">Take Quiz Again</button>
+<!--results section-->
+<section>
+	<div id="resultsContainer">
+		<p id="results">
+			<ul class="myResults"></ul>
+		</p>
+	</div>
+</section>
+<!--results section ends-->
+
+<!--refresh and study guide section-->
+<section class="information">
+	<div class="moreInfo">
+		<div class="refreshPage">
+			<button id="refreshButton">Take Quiz Again</button>
+		</div>
+
+		<div>
+			<p class="or">or</p>
+		</div>
+
+		<div class="studyGuide">
+			<!-- <p>Refresh your memory on all of the Flexbox selectors before you take the quiz again!</p> add this and remove below p tag when i dynamically add my own study guide-->
+			<p>Head over to CSS-Tricks article on Flexbox to refresh your memory before taking the quiz again!</p>
+			<a href="http://bit.ly/2vwtnhM" target="_blank"><button id="studyGuideButton">Flexbox Study Guide</button></a>
+		</div>
+	</div>
+</section>
+<!--results and study guide ends-->
+
+<footer>
+	<div>
+		<p>Thanks for trying out my Flexbox quiz! If you have a Flexbox related question that you think should be added to this quiz, give me a shout and I'll add it! kaitlynbrouwers@gmail.com</p>
 	</div>
 
 	<div>
-		<p>or</p>
+		<p>Get in touch</p>
+		<div class="socialIcons">
+			<a href="https://twitter.com/kaitlynbrouwers"><i class="fa fa-twitter footerIcon" aria-hidden="true"></i></a>
+			<a href="http://bit.ly/2sfyYKV"><i class="fa fa-linkedin footerIcon" aria-hidden="true"></i></a>
+			<a href="https://medium.com/@katiebrouwers"><i class="fa fa-medium footerIcon" aria-hidden="true"></i></a>
+			<a href="https://github.com/KaitlynBro"><i class="fa fa-github footerIcon" aria-hidden="true"></i></a>
+		</div>
 	</div>
 
-	<div class="studyGuide">
-		<!-- <p>Refresh your memory on all of the Flexbox selectors before you take the quiz again!</p> add this and remove below p tag when i dynamically add my own study guide-->
-		<p>Head over to CSS-Tricks article on Flexbox to refresh your memory before taking the quiz again!</p>
-		<a href="http://bit.ly/2vwtnhM" target="_blank"><button id="studyGuideButton">Flexbox Study Guide</button></a>
-	</div>
-</div>
-<div id="flexboxStudy"></div>
+</footer>
 
 <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>	
 <script src="./public/scripts/app.js"></script>

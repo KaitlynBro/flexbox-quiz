@@ -349,3 +349,10 @@ h1 {
   text-transform: uppercase;
   color: #008dd5;
   margin: 0; }
+
+@media (max-width: 700px) {
+  .quizForm {
+    width: 90%; }
+  input.answer {
+    width: 30px;
+    height: 30px; } }

@@ -234,7 +234,6 @@ input[type="submit"] {
   display: flex;
   flex-direction: column;
   line-height: 2;
-  text-transform: capitalize;
   text-align: left;
   padding: 30px;
   width: 80%;

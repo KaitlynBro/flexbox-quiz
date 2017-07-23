@@ -22,7 +22,7 @@ const myQuiz = [
 			b: 'display: flexbox',
 			c: 'display: inline-flex'
 		},
-		correctAnswer: 'answer a'
+		correctAnswer: 'display: flex'
 	},
 	{
 		question: 'Question 2: What element do you target Flexbox on to?',
@@ -31,7 +31,7 @@ const myQuiz = [
 			b: 'Children elements',
 			c: 'Doesn\'t matter'
 		},
-		correctAnswer: 'answer a'
+		correctAnswer: 'The parent element'
 	},
 	{
 		question: 'Question 3: How do you specify how flex items are laid out in the container?',
@@ -40,7 +40,7 @@ const myQuiz = [
 			b: 'flex-direction',
 			c: 'align-items'
 		},
-		correctAnswer: 'answer b'
+		correctAnswer: 'flex-direction'
 	},
 	{
 		question: 'Question 4: What flex property causes flex items to be laid out on multiple lines rather than just one?',
@@ -49,7 +49,7 @@ const myQuiz = [
 			b: 'flex-flow',
 			c: 'flex-basis'
 		},
-		correctAnswer: 'answer a'
+		correctAnswer: 'flex-wrap'
 	},
 	{
 		question: 'Question 5: How can you center your flex items along the main axis?',
@@ -58,7 +58,7 @@ const myQuiz = [
 			b: 'align-items',
 			c: 'justify-content'
 		},
-		correctAnswer: 'answer c'
+		correctAnswer: 'justify-content'
 	},
 	{
 		question: 'Question 6: How can you cause a flex item to grow in size?',
@@ -67,7 +67,7 @@ const myQuiz = [
 			b: 'There is no way to do this with Flexbox',
 			c: 'flex-size'
 		},
-		correctAnswer: 'answer a'
+		correctAnswer: 'flex-grow'
 	},
 	{
 		question: 'Question 7: What Flexbox property changes the order of the flex items?',
@@ -76,7 +76,7 @@ const myQuiz = [
 			b: 'order',
 			c: 'flex-change'
 		},
-		correctAnswer: 'answer b'
+		correctAnswer: 'order'
 	},
 	{
 		question: 'Question 8: What Flexbox property do you use to move a flex item to the end of its container?',
@@ -85,7 +85,7 @@ const myQuiz = [
 			b: 'justify-content: flex-end',
 			c: 'flex-direction: row-reverse'
 		},
-		correctAnswer: 'answer b'
+		correctAnswer: 'justify-content: flex-end'
 	},
 	{
 		question: 'Question 9: How do you center flex items and give them space between each item at the same time?',
@@ -94,7 +94,7 @@ const myQuiz = [
 			b: 'align-items: center;',
 			c: 'justify-content: space-between'
 		},
-		correctAnswer: 'answer c'
+		correctAnswer: 'justify-content: space-between'
 	},
 	{
 		question: 'Question 10: What property forces flex items to be displayed at the baseline of their container?',
@@ -103,7 +103,7 @@ const myQuiz = [
 			b: 'justify-content: flex-end',
 			c: 'align-items: flex-end'
 		},
-		correctAnswer: 'answer c'
+		correctAnswer: 'align-items: flex-end'
 	}
 ]
 
@@ -135,16 +135,16 @@ $.each(myQuiz, function(key, questionObject) {
 $('#quiz-form').on('submit', function(e) {
 	e.preventDefault();
 	
-	let $this = $(this)
+	let $this = $(this);
 	
-	let $questions = $(this).find('.question-container')
+	let $questions = $(this).find('.question-container');
 
 	
 	// Loop over each question container
 	$.each($questions, function (index, questionContainer) {
-		let $questionContainer = $(questionContainer)
+		let $questionContainer = $(questionContainer);
 		// Get the question text
-		let question = $questionContainer.find('h4.question').text()
+		let question = $questionContainer.find('h4.question').text();
 		// Get the questionObject from myQuiz
 		let questionObject = myQuiz.filter(function(questionObject) {
 			return questionObject.question === question
@@ -154,12 +154,10 @@ $('#quiz-form').on('submit', function(e) {
 		// Get the user selected answer
 		let answer = $questionContainer.find('input:checked').val()
 
-
 		// Compare them if they are correct
 			// Do something with right answer
-		if (answer === correctAnswer) {
-			
-			$('.myResults').append(`<li>Correct ${question}</li>` )
+		if (answer === correctAnswer && answer != undefined) {
+			$('.myResults').append(`<li>Correct ${question}</li>` );
 			$('.myResults').css('border', '30px solid #008dd5');		
 		} else {
 			// Do something with wrong answer
@@ -170,13 +168,8 @@ $('#quiz-form').on('submit', function(e) {
 	});
 });
 
-
 //give user option to refresh page to re-take quiz
 $('#refreshButton').on('click', function(){
 	location.href = location.href;
 });
 
-
-
-
- 

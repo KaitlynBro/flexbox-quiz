@@ -48,7 +48,7 @@ h1 {
 }
 
 @media (max-width: 480px) {
-    button {
+    button, input[type="submit"] {
         width: 100%;
     }
     footer {

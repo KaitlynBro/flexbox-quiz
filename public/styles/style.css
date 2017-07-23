@@ -361,7 +361,7 @@ h1 {
     border: 10px solid #008dd5; } }
 
 @media (max-width: 480px) {
-  button {
+  button, input[type="submit"] {
     width: 100%; }
   footer {
     flex-direction: column;
